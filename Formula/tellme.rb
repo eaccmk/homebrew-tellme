@@ -5,20 +5,20 @@
 class Tellme < Formula
   desc "A blazing fast local CLI assistant to verify installed tools and versions."
   homepage "https://github.com/eaccmk/tellme"
-  version "1.1.0"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_darwin_amd64.tar.gz"
-      sha256 "e47603a22f16a1d2a0c3ea9211b0dc7a41a48c7790791a83545cdaafdb8dea84"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_darwin_amd64.tar.gz"
+      sha256 "73f1891173cdb5b20a17151a3212aa80404079626029b0429752f902baf2d95d"
 
       define_method(:install) do
         bin.install "tellme"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_darwin_arm64.tar.gz"
-      sha256 "cf8f310b096e5d93cf95a22904f782d26149f0d1480bc711eee32bd31d35ce28"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_darwin_arm64.tar.gz"
+      sha256 "03afc7dda0812098ad0690bad76240e5f67c29daaf4b0e2ec5727405f928f4f7"
 
       define_method(:install) do
         bin.install "tellme"
@@ -28,15 +28,15 @@ class Tellme < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_linux_amd64.tar.gz"
-      sha256 "e2ef6a7750770c2c2e368477c501cb93c569229975ab436e20d0ad373c4986ae"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_linux_amd64.tar.gz"
+      sha256 "2eedf6acf28b2ac2e3d400c1e518ffb562d30572966de7c5585d9955f745d68b"
       define_method(:install) do
         bin.install "tellme"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_linux_arm64.tar.gz"
-      sha256 "8e5252f95d3c9b3fdf7824a2ca124a4ab9246fb40f6424e32c508cf9918f7924"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_linux_arm64.tar.gz"
+      sha256 "118971b6b1fce26e6431684589298a76aec4a602c39b16c1dac7f1d1fcd49c58"
       define_method(:install) do
         bin.install "tellme"
       end
