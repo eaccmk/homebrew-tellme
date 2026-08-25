@@ -10,7 +10,7 @@ class Tellme < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_darwin_amd64.tar.gz"
-      sha256 "eca7ae0b79aa44080ef4e09f9487b00e7c8cee878d9f5528910bdbbcbdb88d1a"
+      sha256 "e47603a22f16a1d2a0c3ea9211b0dc7a41a48c7790791a83545cdaafdb8dea84"
 
       define_method(:install) do
         bin.install "tellme"
@@ -18,7 +18,7 @@ class Tellme < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_darwin_arm64.tar.gz"
-      sha256 "05da6071a970189fccb4096d49dfebc764b77bc48bf35ec8e0f057c2889e550f"
+      sha256 "cf8f310b096e5d93cf95a22904f782d26149f0d1480bc711eee32bd31d35ce28"
 
       define_method(:install) do
         bin.install "tellme"
@@ -29,14 +29,14 @@ class Tellme < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_linux_amd64.tar.gz"
-      sha256 "6d353c8b804aa50fa30259ae2b2d9c5277eec78d495fc4a029f705a784b3f6cf"
+      sha256 "e2ef6a7750770c2c2e368477c501cb93c569229975ab436e20d0ad373c4986ae"
       define_method(:install) do
         bin.install "tellme"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/eaccmk/tellme/releases/download/v1.1.0/tellme_1.1.0_linux_arm64.tar.gz"
-      sha256 "5555f0d610828c881d5296b3577504eb3b9d6f84f762ae9d95a3c99ab6e94dfb"
+      sha256 "8e5252f95d3c9b3fdf7824a2ca124a4ab9246fb40f6424e32c508cf9918f7924"
       define_method(:install) do
         bin.install "tellme"
       end
