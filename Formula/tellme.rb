@@ -5,20 +5,20 @@
 class Tellme < Formula
   desc "A blazing fast local CLI assistant to verify installed tools and versions."
   homepage "https://github.com/eaccmk/tellme"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_darwin_amd64.tar.gz"
-      sha256 "73f1891173cdb5b20a17151a3212aa80404079626029b0429752f902baf2d95d"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.3.0/tellme_1.3.0_darwin_amd64.tar.gz"
+      sha256 "857c89ef8585f9b4d60fe59ad6a75373903fb83968ee5c04842ccc2e84d06c35"
 
       define_method(:install) do
         bin.install "tellme"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_darwin_arm64.tar.gz"
-      sha256 "03afc7dda0812098ad0690bad76240e5f67c29daaf4b0e2ec5727405f928f4f7"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.3.0/tellme_1.3.0_darwin_arm64.tar.gz"
+      sha256 "4f8b9f47efe095476b373ed27df219004d4fd0fae8f40e9c9db63429987e0ac1"
 
       define_method(:install) do
         bin.install "tellme"
@@ -28,15 +28,15 @@ class Tellme < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_linux_amd64.tar.gz"
-      sha256 "2eedf6acf28b2ac2e3d400c1e518ffb562d30572966de7c5585d9955f745d68b"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.3.0/tellme_1.3.0_linux_amd64.tar.gz"
+      sha256 "089b429f0bc13f4165474a5a3d02668193a99fd4c05ae526d3d44e4434b749f4"
       define_method(:install) do
         bin.install "tellme"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eaccmk/tellme/releases/download/v1.2.0/tellme_1.2.0_linux_arm64.tar.gz"
-      sha256 "118971b6b1fce26e6431684589298a76aec4a602c39b16c1dac7f1d1fcd49c58"
+      url "https://github.com/eaccmk/tellme/releases/download/v1.3.0/tellme_1.3.0_linux_arm64.tar.gz"
+      sha256 "d6209f6d53e21114e69fbd1e51aa12075b7a8e94adc3e1012f647a3bf1853e52"
       define_method(:install) do
         bin.install "tellme"
       end
@@ -45,9 +45,9 @@ class Tellme < Formula
 
   def caveats
     <<~EOS
-      To prevent shell wildcard/globbing errors (e.g. when typing question marks like 'tellme do I have python?'), add the following to your shell profile (~/.zshrc for Zsh):
+      To prevent shell wildcard/globbing errors (e.g. when typing question marks like 'tellme do I have python?'), configure your shell profile:
 
-        eval "$(tellme init)"
+        echo 'eval "$(tellme init)"' >> ~/.zshrc
     EOS
   end
 end
